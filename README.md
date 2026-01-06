@@ -527,6 +527,116 @@ export default function RootLayout({ children }) {
 
 </details>
 
+<details>
+<summary><strong>VSCode</strong></summary>
+
+#### Server Setup
+
+The server runs on port `11567` and interfaces with the VSCode Agent CLI. Add to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "dev": "npx @react-grab/vscode@latest && next dev"
+  }
+}
+```
+
+> **Note:** You must have [VSCode Agent CLI](https://code.visualstudio.com/docs/editor/command-line) installed.
+
+#### Client Setup
+
+```html
+<script src="//unpkg.com/react-grab/dist/index.global.js"></script>
+<!-- add this in the <head> -->
+<script src="//unpkg.com/@react-grab/vscode/dist/client.global.js"></script>
+```
+
+Or using Next.js `Script` component in your `app/layout.tsx`:
+
+```jsx
+import Script from "next/script";
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <head>
+        {process.env.NODE_ENV === "development" && (
+          <>
+            <Script
+              src="//unpkg.com/react-grab/dist/index.global.js"
+              strategy="beforeInteractive"
+            />
+            <Script
+              src="//unpkg.com/@react-grab/vscode/dist/client.global.js"
+              strategy="lazyOnload"
+            />
+          </>
+        )}
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+</details>
+
+<details>
+<summary><strong>Antigravity</strong></summary>
+
+#### Server Setup
+
+The server runs on port `12567` and interfaces with the Antigravity Agent CLI. Add to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "dev": "npx @react-grab/antigravity@latest && next dev"
+  }
+}
+```
+
+> **Note:** You must have [Antigravity CLI](https://antigravity.dev/docs/cli) installed.
+
+#### Client Setup
+
+```html
+<script src="//unpkg.com/react-grab/dist/index.global.js"></script>
+<!-- add this in the <head> -->
+<script src="//unpkg.com/@react-grab/antigravity/dist/client.global.js"></script>
+```
+
+Or using Next.js `Script` component in your `app/layout.tsx`:
+
+```jsx
+import Script from "next/script";
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <head>
+        {process.env.NODE_ENV === "development" && (
+          <>
+            <Script
+              src="//unpkg.com/react-grab/dist/index.global.js"
+              strategy="beforeInteractive"
+            />
+            <Script
+              src="//unpkg.com/@react-grab/antigravity/dist/client.global.js"
+              strategy="lazyOnload"
+            />
+          </>
+        )}
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+</details>
+
 ## Extending React Grab
 
 React Grab uses a plugin system to extend functionality. Check out the [type definitions](https://github.com/aidenybai/react-grab/blob/main/packages/react-grab/src/types.ts) to see all available options.
