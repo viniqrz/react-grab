@@ -252,6 +252,37 @@ importers:
         specifier: ^8.4.0
         version: 8.5.1(jiti@2.6.1)(postcss@8.5.6)(tsx@4.20.6)(typescript@5.9.3)(yaml@2.8.1)
 
+  packages/provider-antigravity:
+    dependencies:
+      '@hono/node-server':
+        specifier: ^1.19.6
+        version: 1.19.6(hono@4.10.7)
+      execa:
+        specifier: ^9.6.0
+        version: 9.6.1
+      fkill:
+        specifier: ^9.0.0
+        version: 9.0.0
+      hono:
+        specifier: ^4.0.0
+        version: 4.10.7
+      picocolors:
+        specifier: ^1.1.1
+        version: 1.1.1
+      react-grab:
+        specifier: workspace:*
+        version: link:../react-grab
+    devDependencies:
+      '@react-grab/utils':
+        specifier: workspace:*
+        version: link:../utils
+      '@types/node':
+        specifier: ^22.10.7
+        version: 22.19.2
+      tsup:
+        specifier: ^8.4.0
+        version: 8.5.1(jiti@2.6.1)(postcss@8.5.6)(tsx@4.20.6)(typescript@5.9.3)(yaml@2.8.1)
+
   packages/provider-claude-code:
     dependencies:
       '@anthropic-ai/claude-agent-sdk':
@@ -459,6 +490,37 @@ importers:
         specifier: workspace:*
         version: link:../react-grab
     devDependencies:
+      tsup:
+        specifier: ^8.4.0
+        version: 8.5.1(jiti@2.6.1)(postcss@8.5.6)(tsx@4.20.6)(typescript@5.9.3)(yaml@2.8.1)
+
+  packages/provider-vscode:
+    dependencies:
+      '@hono/node-server':
+        specifier: ^1.19.6
+        version: 1.19.6(hono@4.10.7)
+      execa:
+        specifier: ^9.6.0
+        version: 9.6.1
+      fkill:
+        specifier: ^9.0.0
+        version: 9.0.0
+      hono:
+        specifier: ^4.0.0
+        version: 4.10.7
+      picocolors:
+        specifier: ^1.1.1
+        version: 1.1.1
+      react-grab:
+        specifier: workspace:*
+        version: link:../react-grab
+    devDependencies:
+      '@react-grab/utils':
+        specifier: workspace:*
+        version: link:../utils
+      '@types/node':
+        specifier: ^22.10.7
+        version: 22.19.2
       tsup:
         specifier: ^8.4.0
         version: 8.5.1(jiti@2.6.1)(postcss@8.5.6)(tsx@4.20.6)(typescript@5.9.3)(yaml@2.8.1)
@@ -2262,8 +2324,8 @@ packages:
     resolution: {integrity: sha512-y9/ltK2TY+0HD1H2Sz7MvU3zFh4SjER6eQVNQfBx/0gK9N7S0QwHW6cmhHLx3CP25zN190LKHXPieMGqsVvrOQ==}
     engines: {node: '>=18'}
 
-  '@sourcegraph/amp@0.0.1767254483-g812f6b':
-    resolution: {integrity: sha512-a0tb1GUcDOvf2r8lZylBGOmaFvFwXwF5aQ5o4Na7er6IPRuBkJGN5HGcZEfQGPpGFRoOwkzTgHW0Cr76k69Mbw==}
+  '@sourcegraph/amp@0.0.1767715274-g0ff8db':
+    resolution: {integrity: sha512-Q8f3htRFopPjjZy/WaYUkHYyJiK9/v/3zXXhIOmIm9vNIY/grA2n3o348zCuc4+qKc3HIHn56GV/M61V/b4UMg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -6480,7 +6542,7 @@ snapshots:
       '@babel/parser': 7.28.4
       '@babel/template': 7.27.2
       '@babel/types': 7.28.5
-      debug: 4.4.0
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -7513,10 +7575,10 @@ snapshots:
 
   '@sourcegraph/amp-sdk@0.1.0-20251210081226-g90e3892':
     dependencies:
-      '@sourcegraph/amp': 0.0.1767254483-g812f6b
+      '@sourcegraph/amp': 0.0.1767715274-g0ff8db
       zod: 3.25.76
 
-  '@sourcegraph/amp@0.0.1767254483-g812f6b':
+  '@sourcegraph/amp@0.0.1767715274-g0ff8db':
     dependencies:
       '@napi-rs/keyring': 1.1.9
 
